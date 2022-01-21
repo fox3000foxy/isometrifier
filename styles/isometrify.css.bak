@@ -1,0 +1,17 @@
+body {
+  background-color: #black;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+*[isometric] {
+  /* background-color: #49b293; */
+  width: var(--width);
+  height: var(--height);
+  /* margin: 100px auto 0 auto; */
+  /* transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg); */
+  transform: skew(-45deg, 0deg);
+}
+
+*[tile] {
+	position:absolute;
+}
