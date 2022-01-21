@@ -33,20 +33,22 @@ characterElements.forEach(characterElement=>{
 	}
 	document.onkeydown = (ev)=>{
 		// console.log(ev.key)
-		if (
-			ev.key == "ArrowRight" ||
-			ev.key == "ArrowDown" ||
-			ev.key == "ArrowLeft" ||
-			ev.key == "ArrowUp"
-		){
-			if(ev.key == "ArrowLeft") {character.style.transform = "scaleX(-1)";}
-			if(ev.key == "ArrowRight") {character.style.transform = "scaleX(1)";}
-			
-			if(ev.key == "ArrowRight") {pressed.right = true}
-			if(ev.key == "ArrowLeft") {pressed.left = true}
-			if(ev.key == "ArrowUp") {pressed.up = true}
-			if(ev.key == "ArrowDown") {pressed.down = true}
-		}
+		// if (
+			// ev.key == "ArrowRight" ||
+			// ev.key == "ArrowDown" ||
+			// ev.key == "ArrowLeft" ||
+			// ev.key == "ArrowUp"
+		// ){
+		if(ev.key == "ArrowLeft") {character.style.transform = "scaleX(-1)";}
+		if(ev.key == "ArrowRight") {character.style.transform = "scaleX(1)";}
+		
+		if(ev.key == "ArrowRight") {pressed.right = true}
+		if(ev.key == "ArrowLeft") {pressed.left = true}
+		if(ev.key == "ArrowUp") {pressed.up = true}
+		if(ev.key == "ArrowDown") {pressed.down = true}
+		if(ev.key == " ") {jumping = true}
+		// console.log(ev.key,jumping)
+		// }
 	}
 		
 	document.onkeyup = (ev)=>{
@@ -69,6 +71,21 @@ characterElements.forEach(characterElement=>{
 			if(character.src.indexOf(runSrc) == -1) character.src = runSrc
 		}
 		else if(character.src.indexOf(idleSrc) == -1) character.src = idleSrc
+		
+		if(jumping) {
+			for (i=0;i<21;i++) {
+				setTimeout(()=>{
+					mapBox.style.top = (parseInt(mapBox.style.top)+(speed/4))+"px"
+				},i*12.5)				
+			}
+			for (i=25;i<46;i++) {
+				setTimeout(()=>{
+					mapBox.style.top = (parseInt(mapBox.style.top)-(speed/4))+"px"
+				},i*12.5)	
+			}
+			jumping = false
+			// console.log("Jump")
+		}
 	},50)
 	
 	

@@ -1,7 +1,7 @@
 width = 60
 height = width * 3/4
 speed = 16
-
+jumping = false 
 //Tiles minimizer
 g = 'grass'
 s = 'stone'
