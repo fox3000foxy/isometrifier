@@ -12,4 +12,10 @@ function inject() {
 		fadeOutPercent++
 		if(fadeOutPercent==101) clearInterval(fadeOut)
 	},1)
+	
+	setInterval(()=>{
+		document.querySelectorAll("*:not([draggable])").forEach((elem)=>{
+			elem.setAttribute('draggable', false);
+		})
+	},50)
 }
