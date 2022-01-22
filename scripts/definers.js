@@ -25,3 +25,4 @@ Module.defineStyle(`
 //Elements
 mapElement = document.getElementById('map')
 mapBox = document.getElementById('mapBox')
+playersList = document.getElementById('players')

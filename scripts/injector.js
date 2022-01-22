@@ -2,6 +2,7 @@ function inject() {
 	Module.import('definers')
 	Module.import('map')
 	Module.import('placer')
+	Module.import('players')
 	Module.import('characters')
 	
 	Module.cssImport('character')
