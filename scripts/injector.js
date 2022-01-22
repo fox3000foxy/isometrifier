@@ -4,7 +4,6 @@ function inject() {
 	Module.import('placer')
 	Module.import('players')
 	Module.import('characters')
-	
 	Module.cssImport('character')
 	
 	fadeOutPercent = 0
@@ -12,7 +11,7 @@ function inject() {
 		document.body.style = `clip-path: circle(${fadeOutPercent}% at center center);`
 		fadeOutPercent++
 		if(fadeOutPercent==101) clearInterval(fadeOut)
-	},1)
+	})
 	
 	setInterval(()=>{
 		document.querySelectorAll("*:not([draggable])").forEach((elem)=>{
