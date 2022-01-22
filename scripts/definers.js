@@ -1,16 +1,16 @@
 width = 60
 height = width * 3/4
-speed = 16
-jumping = false 
-//Tiles minimizer
-g = 'grass'
-s = 'stone'
-w = 'water'
 
+//Tiles minimizer
+gr = 'grass'
+st = 'stone'
+wa = 'water'
+sa = 'sand'
 //Type of tile
 format = {
 	"grass": "jpg",
 	"stone": "jpg",
+	"sand": "jpg",
 	"water": "gif"
 }
 
